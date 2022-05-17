@@ -1,0 +1,5 @@
+### 全ての学生情報
+GET http://localhost:8080/students HTTP/1.1
+
+### 特定の学生情報
+GET http://localhost:8080/students/1 HTTP/1.1

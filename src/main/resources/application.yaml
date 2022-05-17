@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    # Postgreドライバー
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5433/yugabyte?currentSchema=gekal
+    # yugabyteドライバー
+    driver-class-name: com.yugabyte.Driver
+    url: jdbc:yugabytedb://localhost:5433/yugabyte?currentSchema=gekal
+    username: yugabyte
+    password: yugabyte

@@ -1,0 +1,21 @@
+---
+version: "3"
+services:
+  yugabytedb:
+    image: yugabytedb/yugabyte:latest
+    container_name: yugabyte-db
+    ports:
+      - "7000:7000"
+      - "9000:9000"
+      - "5433:5433"
+      - "9042:9042"
+    restart: always
+    command: bin/yugabyted start --base_dir=/home/yugabyte/yb_data --daemon=false --initial_scripts_dir /docker-entrypoint-initdb.d
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - ./db/initdb:/docker-entrypoint-initdb.d
+      - yugabytedb:/home/yugabyte/yb_data
+
+volumes:
+  yugabytedb:
