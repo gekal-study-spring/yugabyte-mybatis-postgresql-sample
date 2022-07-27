@@ -5,9 +5,13 @@ services:
     image: yugabytedb/yugabyte:latest
     container_name: yugabyte-db
     ports:
+      # YT-Master Admin UI
       - "7000:7000"
+      # YT-TServer Admin UI
       - "9000:9000"
+      # PostgreSQL Port
       - "5433:5433"
+      # Apache Cassandra Port
       - "9042:9042"
     restart: always
     command: bin/yugabyted start --base_dir=/home/yugabyte/yb_data --daemon=false --initial_scripts_dir /docker-entrypoint-initdb.d
