@@ -2,8 +2,8 @@
 
 ## 管理コンソール
 
-1. [YT-Master Admin UI](http://127.0.0.1:7000/)
-2. [YT-TServer Admin UI](http://127.0.0.1:9000)
+1. [YT-Master Admin UI](http://localhost:7000/)
+2. [YT-TServer Admin UI](http://localhost:9000)
 
 ## 接続情報
 
